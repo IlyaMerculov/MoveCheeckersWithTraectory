@@ -5,67 +5,27 @@ console.log(influxdb)
 
 let client = mqtt.connect('wss://test.mosquitto.org:8081' , 8080)
 
-// You can generate a Token from the "Tokens Tab" in the UI
-// const token = 'IWmVAdV3zrsm7I_lzZcO7aroPfKl7gHwDgBfvdXDgYzTmgtjPB5sDtcqz9ikKd4UY3ZeM4khjOGuLjxGb8VnYg=='
-// const org = 'ilyamerculov@gmail.com'
-// const bucket = '52a428f5d3376301'
-// const clientDB = influxdb.InfluxDB({url: 'https://europe-west1-1.gcp.cloud2.influxdata.com', token: token})
 
-// console.log(clientDB)
-
-// const writeApi = clientDB.getWriteApi(org, bucket)
-// writeApi.useDefaultTags({host: 'host1'})
-
-// const point = influxdb.Point('mem')
-//   .floatField('used_percent', 23.43234543)
-// writeApi.writePoint(point)
-// writeApi
-//     .close()
-//     .then(() => {
-//         console.log('FINISHED')
-//     })
-//     .catch(e => {
-//         console.error(e)
-//         console.log('Finished ERROR')
-//     })
-
-// let req = new XMLHttpRequest;
-// let url = 'http://127.0.0.1:8278/';
-// req.open("POST" , url , true);
-// req.setRequestHeader("Content-Type", "application/json");
-// req.setRequestHeader("Access-Control-Allow-Origin", "*");
-// req.setRequestHeader("Access-Control-Allow-Methods", "GET , PUT , POST , DELETE");
-// req.onreadystatechange = function () { 
-//     if (this.readyState === 4 && this.status === 200) { 
-//         console.log(succses);
-//     } 
-// };
-// let data = '{ "cheecker" : "qwerty" }'
-// let json = JSON.parse(data);
-// console.log(json)
-
-// req.send(data)
-
-fetch('http://127.0.0.1:8278/' , {
-    method: 'POST',
-    body: JSON.stringify({
-        title : "cheecker"
-    }),
-    headers: {
-        "Content-Type" : "application/json",
-        "Access-Control-Allow-Origin" : "*",
-        "Access-Control-Allow-Methods": "GET , PUT , POST , DELETE"
-    }
-}).then(function (response) {
-	if (response.ok) {
-		return response.json();
-	}
-	return Promise.reject(response);
-}).then(function (data) {
-	console.log(data);
-}).catch(function (error) {
-	console.warn('Something went wrong.', error);
-});
+// fetch('http://127.0.0.1:8278/' , {
+//     method: 'POST',
+//     body: JSON.stringify({
+//         title : "cheecker"
+//     }),
+//     headers: {
+//         "Content-Type" : "application/json",
+//         "Access-Control-Allow-Origin" : "*",
+//         "Access-Control-Allow-Methods": "GET , PUT , POST , DELETE"
+//     }
+// }).then(function (response) {
+// 	if (response.ok) {
+// 		return response.json();
+// 	}
+// 	return Promise.reject(response);
+// }).then(function (data) {
+// 	console.log(data);
+// }).catch(function (error) {
+// 	console.warn('Something went wrong.', error);
+// });
 
 const scene = new THREE.Scene();
 // var projector = new THREE.Projector();
