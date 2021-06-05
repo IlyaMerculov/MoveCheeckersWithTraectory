@@ -6,26 +6,26 @@ console.log(influxdb)
 let client = mqtt.connect('wss://test.mosquitto.org:8081' , 8080)
 
 
-// fetch('http://127.0.0.1:8278/' , {
-//     method: 'POST',
-//     body: JSON.stringify({
-//         title : "cheecker"
-//     }),
-//     headers: {
-//         "Content-Type" : "application/json",
-//         "Access-Control-Allow-Origin" : "*",
-//         "Access-Control-Allow-Methods": "GET , PUT , POST , DELETE"
-//     }
-// }).then(function (response) {
-// 	if (response.ok) {
-// 		return response.json();
-// 	}
-// 	return Promise.reject(response);
-// }).then(function (data) {
-// 	console.log(data);
-// }).catch(function (error) {
-// 	console.warn('Something went wrong.', error);
-// });
+fetch('http://127.0.0.1:8278/' , {
+    method: 'POST',
+    body: JSON.stringify({
+        title : "cheecker"
+    }),
+    headers: {
+        "Content-Type" : "application/json",
+        "Access-Control-Allow-Origin" : "*",
+        "Access-Control-Allow-Methods": "GET , PUT , POST , DELETE"
+    }
+}).then(function (response) {
+	if (response.ok) {
+		return response.json();
+	}
+	return Promise.reject(response);
+}).then(function (data) {
+	console.log(data);
+}).catch(function (error) {
+	console.warn('Something went wrong.', error);
+});
 
 const scene = new THREE.Scene();
 // var projector = new THREE.Projector();
